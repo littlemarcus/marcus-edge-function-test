@@ -8,6 +8,7 @@ const setHeader = async (request: Request, context: Context) => {
 
 export const config: Config = {
     path: "/*",
+    onError: "/classics"
 }
 
 export default setHeader;
