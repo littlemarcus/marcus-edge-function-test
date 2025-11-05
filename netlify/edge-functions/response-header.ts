@@ -5,6 +5,6 @@ export default async () => {
 };
 
 export const config: Config = {
-  path: "/*",
+  path: "/image-cdn",
   onError: "/classics"
 }
