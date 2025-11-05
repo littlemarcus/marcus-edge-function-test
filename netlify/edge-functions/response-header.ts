@@ -1,16 +1,10 @@
-import type { Context, Config } from "@netlify/edge-functions";
+import { Config } from "@netlify/edge-functions"
 
-const setHeader = async (request: Request, context: Context) => {
-  throw new Error("Intentional runtime error for testing");
-
-  const response = await context.next();
-  response.headers.set("Test-Header", "valyew");
-  return response;
+export default async () => {
+  throw new Error("error");
 };
 
 export const config: Config = {
-    path: "/*",
-    onError: "/bypass"
+  path: "/hello",
+  onError: "/classics"
 }
-
-export default setHeader;
