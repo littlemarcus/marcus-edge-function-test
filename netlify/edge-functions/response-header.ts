@@ -6,4 +6,8 @@ const setHeader = async (request: Request, context: Context) => {
   return response;
 };
 
+export const config: Config = {
+    path: "/*",
+}
+
 export default setHeader;
